@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Get Lucid Tabs Name",
+  "author": "Jean Carlos de Oliveira",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "backend.js"
+      ],
+      "matches": [
+        "https://lucid.app/lucidchart/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
